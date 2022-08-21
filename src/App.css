@@ -7,3 +7,12 @@
   display: block;
   margin: 0 auto;
 }
+
+.App a {
+  text-decoration: none;
+}
+
+.App footer {
+  margin-top: 15px;
+  font-size: small;
+}
