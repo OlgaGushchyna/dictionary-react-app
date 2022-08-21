@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import Results from "./Results";
 
 export default function Dictionary() {
+  let [results, setResults] = useState(null);
   function handleResponce(response) {
-    console.log(response.data[0]);
+    setResults(response.data[0]);
   }
 
   function handleSubmit(event) {
@@ -18,6 +20,7 @@ export default function Dictionary() {
       <form onSubmit={handleSubmit}>
         <input type="search" />
       </form>
+      <Results results={results} />
     </div>
   );
 }
