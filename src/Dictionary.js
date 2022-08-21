@@ -1,9 +1,16 @@
 import React from "react";
+import axios from "axios";
 
 export default function Dictionary() {
+  function handleResponce(response) {
+    console.log(response.data[0]);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
-    alert(event.target[0].value);
+    let keyword = event.target[0].value;
+    let urlApi = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+    axios.get(urlApi).then(handleResponce);
   }
 
   return (
