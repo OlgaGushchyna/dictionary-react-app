@@ -3,3 +3,8 @@
   line-height: 1.5;
   font-weight: bold;
 }
+
+.Meaning .Definition {
+  margin: 15px 0;
+  padding: 0;
+}
